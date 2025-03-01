@@ -1,9 +1,9 @@
 /*
-*Ãû³Æ£ºGaussian_Blur
-*ÖÆ×÷Õß£º×Ï³õ³½
-*½éÉÜ£ºÊ¹ÓÃeasyx½øĞĞ¸ßË¹Ä£ºı
-*±àÒë»·¾³£ºvc2022
-*±¸×¢:Çë½«¸ÃÔ´ÂëÎÄ¼ş¿½±´ÖÁÔ´ÎÄ¼şÄ¿Â¼
+*åç§°ï¼šGaussian_Blur
+*åˆ¶ä½œè€…ï¼šç´«åˆè¾°
+*ä»‹ç»ï¼šä½¿ç”¨easyxè¿›è¡Œé«˜æ–¯æ¨¡ç³Š
+*ç¼–è¯‘ç¯å¢ƒï¼švc2022
+*å¤‡æ³¨:è¯·å°†è¯¥æºç æ–‡ä»¶æ‹·è´è‡³æºæ–‡ä»¶ç›®å½•
 */
 #include "Gaussian_Blur.h"
 #include <windows.h>
@@ -98,8 +98,8 @@ void Gaussian_Blur::gaussian_blur(execute_method method) {
 		break;
 	case execute_method::main_thread:
 	{
-		COLOR** i = new COLOR* (COLOR_image_result_array);
-		double** d = new double* (distance_table);
+		COLOR** i = new COLOR* (*COLOR_image_result_array);
+		double** d = new double* (*distance_table);
 		blur(i, d);
 	}
 		break;
